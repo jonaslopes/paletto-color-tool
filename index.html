@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="initial-scale=1">
+  <title>Paletto</title>
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet"> 
+  <link href='style.css' rel='stylesheet'>
+  <script src="w3color.js"></script>
+</head>
+
+<body>
+    
+<div id="app">
+  <header class="app-header">
+    <div id="menubar">
+      <div class="menubar__logo">
+        <div id="logo">
+          <a href="#" class="logo__link">
+            <img src="palleto-color-tool-logo.jpg" alt="Paletto Color Tool" title="Paletto Color Tool" class="menubar__logo--imagem" />
+          </a>
+        </div>
+      </div>
+      <div class="menubar__import">
+        <div id="import">
+          <button class="import__button">Import your .Palleto file</button>
+        </div>
+      </div>
+      <div class="menubar__login">
+        <nav id="navbar">
+          <div class="navbar__username"><p>Jonas Lopes</p></div>
+          <div class="navbar__usericon" id="navbar-usericon" name="navbar-usericon"> </div>
+          <ul class="navbar__list" id="navbar-list" name="navbar-list">
+            <li class="navbar__list--item"><a href="#services" class="navbar__item--first-link">Logout</a></li>
+            <li class="navbar__list--item"><a href="#about" class="navbar__item--about-link">About Us</a></li>
+            <li class="navbar__list--item"><a href="#contact" class="navbar__item--contact-link contactus">Contact Us</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+  <section class="app-content">
+    <div id="colorcontrol">
+      <div class="colorcontrol__color">
+        <div class="colorcontrol__color--usercolor">
+
+          <!-- COMPONENTE USER COLOR -->
+          <div id="usercolor">
+            <div class="usercolor__inputcolor">
+              <p class="usercolor__inputcolor--label">Search your color</p>
+              <p class="usercolor__inputcolor--hex"># <input type="text" name="inputColor" id="inputColor" /></p>
+            </div>
+            <div class="usercolor__namecolor">
+              <p class="usercolor__namecolor--hex"># <span id="userColorNameHexSpan">0D0D0D</span></p>
+              <p class="usercolor__namecolor--name" id="userColorName">Pure Red</p>
+            </div>
+          </div>
+
+        </div>
+        <div class="colorcontrol__color--systemcolor">
+          <div id="systemcolor">
+              <div class="systemcolor__selected" id="systemcolor-selected" name="systemcolor-selected"> </div>
+          </div>
+        </div>
+        <div class="colorcontrol__color--convertedcolor">
+
+          <div id="convertedcolor">
+              <table class="convertedcolor__table" style="width:100%">
+                  <tr>
+                    <td class="convertedcolor__table--linetitle">RGB</td>
+                    <td class="convertedcolor__table--linevalue" id="convertedColorRgb">255,255,255</td>
+                  </tr>
+                  <tr>
+                    <td class="convertedcolor__table--linetitle">CMYK</td>
+                    <td class="convertedcolor__table--linevalue" id="convertedColorCmyk">198,250,268,0</td>
+                  </tr>
+                  <tr>
+                    <td class="convertedcolor__table--linetitle">HSL</td>
+                    <td class="convertedcolor__table--linevalue" id="convertedColorHsl">132,100,50</td>
+                  </tr>
+                  <!-- <tr>
+                    <td class="convertedcolor__table--linetitle">HWB</td>
+                    <td class="convertedcolor__table--linevalue" id="convertedColorPantone">255,255,255,0%</td>
+                  </tr> -->
+                </table> 
+          </div>
+
+        </div>
+      </div>
+      
+        <!-- <div id="usercolor">
+            <p>Search your color</p>
+            <input type="text" name="usercolor-input" id="usercolor-input" />
+          </div>
+          
+          <div class="colorgradient">
+            <div class="colorgradient__colorbox __light">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+          </div>
+          <br />
+          <div class="colorgradient">
+              <div class="colorgradient__colorbox __dark">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                  <div></div>
+              </div>
+          </div> -->
+        
+    </div>
+    <div id="addpalette">
+      <button class="addpalette__button">Add to Palette</button>
+    </div>
+  </section>
+  
+    <script src="script.js"></script>
+</body>
+
+</html> 
