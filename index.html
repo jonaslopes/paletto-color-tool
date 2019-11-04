@@ -4,9 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="initial-scale=1">
   <title>Paletto</title>
-  <link href="https://fonts.googleapis.com/css?family=Work+Sans&display=swap" rel="stylesheet"> 
   <link href='style.css' rel='stylesheet'>
-  <script src="w3color.js"></script>
 </head>
 
 <body>
@@ -21,115 +19,154 @@
           </a>
         </div>
       </div>
-      <div class="menubar__import">
-        <div id="import">
-          <button class="import__button">Import your .Palleto file</button>
+      <div class="menubar__button">
+        <div class="save">
+          <button class="save__button btn_small">Save your .Palleto file</button>
+        </div>
+        <div class="import">
+          <button class="import__button btn_small">Import your .Palleto file</button>
         </div>
       </div>
       <div class="menubar__login">
         <nav id="navbar">
-          <div class="navbar__username"><p>Jonas Lopes</p></div>
-          <div class="navbar__usericon" id="navbar-usericon" name="navbar-usericon"> </div>
+          <div class="navbar__username"><p>Paletto Admin</p></div>
+          <div class="shape_circle shape_circle-small navbar__usericon" id="navbar-usericon" name="navbar-usericon"> </div>
           <ul class="navbar__list" id="navbar-list" name="navbar-list">
-            <li class="navbar__list--item"><a href="#services" class="navbar__item--first-link">Logout</a></li>
-            <li class="navbar__list--item"><a href="#about" class="navbar__item--about-link">About Us</a></li>
-            <li class="navbar__list--item"><a href="#contact" class="navbar__item--contact-link contactus">Contact Us</a></li>
+              <li class="navbar__list--item"><a href="#Save" class="navbar__list--item-link">Save your .Palleto file</a></li>
+              <li class="navbar__list--item"><a href="#Import" class="navbar__list--item-link">Import your .Palleto file</a></li>
+            <li class="navbar__list--item"><a href="#logout" class="navbar__list--item-link">Logout</a></li>
+            <li class="navbar__list--item"><a href="#about" class="navbar__list--item-link">About Us</a></li>
+            <li class="navbar__list--item"><a href="#contact" class="navbar__list--item-link contactus">Contact Us</a></li>
           </ul>
         </nav>
       </div>
     </div>
   </header>
   <section class="app-content">
+
     <div id="colorcontrol">
       <div class="colorcontrol__color">
+
         <div class="colorcontrol__color--usercolor">
-
-          <!-- COMPONENTE USER COLOR -->
           <div id="usercolor">
+            
             <div class="usercolor__inputcolor">
-              <p class="usercolor__inputcolor--label">Search your color</p>
-              <p class="usercolor__inputcolor--hex"># <input type="text" name="inputColor" id="inputColor" /></p>
+
+              <!-- SEARCH COLOR COMPONENT -->
+              <div class="searchcolor">
+                <p class="searchcolor__label">Search your color:</p>
+                <p class="searchcolor__text">
+                  # <input type="text" class="searchcolor__text--input" name="inputColor" id="inputColor" value="1F75FE" />
+                </p>
+              </div>
+            
             </div>
+            
             <div class="usercolor__namecolor">
-              <p class="usercolor__namecolor--hex"># <span id="userColorNameHexSpan">0D0D0D</span></p>
-              <p class="usercolor__namecolor--name" id="userColorName">Pure Red</p>
+
+              <!-- USER HEX COLOR COMPONENT -->
+              <div class="usercolorHexSelected" data-module="component">
+                <p class="usercolorHexSelected__text"># <span>1F75FE</span></p>
+              </div>
+
+              
+              <!-- USER NAME COLOR COMPONENT -->
+              <div class="usercolorNameSelected" data-module="component">
+                <p class="usercolorNameSelected__text">HTML Color</p>
+              </div>
             </div>
+
+          </div>
+        </div>
+
+        <div class="colorcontrol__color--systemcolor">
+
+          <!-- USER CIRCLE COLOR COMPONENT -->
+          <div class="colorCircleSelected">
+              <div class="colorCircleSelected__object"> </div>
           </div>
 
-        </div>
-        <div class="colorcontrol__color--systemcolor">
-          <div id="systemcolor">
-              <div class="systemcolor__selected" id="systemcolor-selected" name="systemcolor-selected"> </div>
-          </div>
         </div>
         <div class="colorcontrol__color--convertedcolor">
-
-          <div id="convertedcolor">
-              <table class="convertedcolor__table" style="width:100%">
-                  <tr>
-                    <td class="convertedcolor__table--linetitle">RGB</td>
-                    <td class="convertedcolor__table--linevalue" id="convertedColorRgb">255,255,255</td>
+          
+          <!-- USER TABLE CONVERTED COLOR COMPONENT -->
+          <div class="convertedColorTable">
+              <table class="convertedColorTable__table" style="width:100%">
+                  <tr class="convertedColorTable__line">
+                    <td class="convertedColorTable__line--title">RGB</td>
+                    <td class="convertedColorTable__line--value convertedColorTableLineRgb">255,255,255</td>
                   </tr>
-                  <tr>
-                    <td class="convertedcolor__table--linetitle">CMYK</td>
-                    <td class="convertedcolor__table--linevalue" id="convertedColorCmyk">198,250,268,0</td>
+                  <tr class="convertedColorTable__line">
+                    <td class="convertedColorTable__line--title">CMYK</td>
+                    <td class="convertedColorTable__line--value convertedColorTableLineCmyk">198,250,268,0</td>
                   </tr>
-                  <tr>
-                    <td class="convertedcolor__table--linetitle">HSL</td>
-                    <td class="convertedcolor__table--linevalue" id="convertedColorHsl">132,100,50</td>
+                  <tr class="convertedColorTable__line">
+                    <td class="convertedColorTable__line--title">HSL</td>
+                    <td class="convertedColorTable__line--value convertedColorTableLineHsl">132,100,50</td>
                   </tr>
-                  <!-- <tr>
-                    <td class="convertedcolor__table--linetitle">HWB</td>
-                    <td class="convertedcolor__table--linevalue" id="convertedColorPantone">255,255,255,0%</td>
-                  </tr> -->
                 </table> 
           </div>
 
         </div>
+
+      </div>        
+    </div>
+    
+    <div id="addpalette">
+      <button class="addpalette__button btn--blue">Add to Palette</button>
+    </div>
+
+    <div class="colorcontrol__color--gradient" id="colorControlGradient" data-module="diagramming">
+      <div class="colorcontrol__title"><h3>My Palettes</h3></div>
+      <div class="colorcontrol__nopalettes"><p>No palettes!</p></div>
+    </div>
+      
+
+  </section>
+  <footer class="app-footer flexbox">
+    <div class="footer__content">
+      <div class="footer__author">
+        <p class="open-source">
+          Paletto is 100% open-source
+        </p>
+        <p class="created">
+          by <strong>Hugo Fiaux</strong> and developed by <strong>Jonas Lopes</strong>
+        </p>
+        <p class="license-fork">
+            <button class="open-modal-license">Apache License Version 2.0</button> - Fork it on <strong><a href="#">GitHub</a></strong>
+        </p>
       </div>
       
-        <!-- <div id="usercolor">
-            <p>Search your color</p>
-            <input type="text" name="usercolor-input" id="usercolor-input" />
+      <div class="footer__copyright">
+        <div id="copyrightModal" class="modal">
+          <div class="modal-content">
+            <span class="modal-close">&times;</span>
+            <img src="https://raw.githubusercontent.com/jonaslopes/paletto-color-tool/master/palleto-color-tool-logo.jpg" alt="Paletto Color Tool" title="Paletto Color Tool" class="menubar__logo--imagem" />
+            <p class="apache-license">
+                Copyright 2019 Jonas Lopes
+              <br />
+              <br />
+                Licensed under the Apache License, Version 2.0 (the "License");<br />
+                you may not use this file except in compliance with the License.<br />
+                You may obtain a copy of the License at<br />
+              <br />
+              <br />  
+              <a href="http://www.apache.org/licenses/LICENSE-2.0">http://www.apache.org/licenses/LICENSE-2.0</a>
+              <br />        
+              <br />
+                Unless required by applicable law or agreed to in writing, software<br />
+                distributed under the License is distributed on an "AS IS" BASIS,<br />
+                WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.<br />
+                See the License for the specific language governing permissions and<br />
+                limitations under the License.<br />
+              <br />
+            </p>
           </div>
-          
-          <div class="colorgradient">
-            <div class="colorgradient__colorbox __light">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-            </div>
-          </div>
-          <br />
-          <div class="colorgradient">
-              <div class="colorgradient__colorbox __dark">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                  <div></div>
-              </div>
-          </div> -->
-        
+      </div>
     </div>
-    <div id="addpalette">
-      <button class="addpalette__button">Add to Palette</button>
-    </div>
-  </section>
-  
-    <script src="script.js"></script>
+  </footer>
+</div>
+<script src="script.js"></script>
 </body>
 
 </html> 
