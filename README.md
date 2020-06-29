@@ -1,3 +1,3 @@
 # paletto-color-tool
 
-*https://codepen.io/jonaslopes/pen/PooWEmL
+https://codepen.io/jonaslopes/pen/PooWEmL
